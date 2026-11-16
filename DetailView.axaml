@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Katalog.DetailView">
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Szczegóły pozycji" FontSize="22" FontWeight="Bold"/>
+
+        <StackPanel Spacing="5">
+            <TextBlock Text="Tytuł:" FontWeight="SemiBold"/>
+            <TextBlock Name="TitleText" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Spacing="5">
+            <TextBlock Text="Rok wydania:" FontWeight="SemiBold"/>
+            <TextBlock Name="YearText" FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Spacing="5">
+            <TextBlock Text="Ocena:" FontWeight="SemiBold"/>
+            <TextBlock Name="RatingText" FontSize="16"/>
+        </StackPanel>
+
+        <Button Name="BackButton" Click="OnBackClick" Width="100">Wróć</Button>
+    </StackPanel>
+</UserControl>

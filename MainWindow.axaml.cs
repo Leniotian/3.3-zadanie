@@ -18,10 +18,18 @@ public class CatalogItem
 public partial class MainWindow : Window
 {
     private readonly List<CatalogItem> _items = new();
+    private object? _listContent;
 
     public MainWindow()
     {
         InitializeComponent();
+        _listContent = MainContainer.Content;
+        LoadItems();
+    }
+
+    public void ShowListView()
+    {
+        MainContainer.Content = _listContent;
         LoadItems();
     }
 
@@ -63,11 +71,13 @@ public partial class MainWindow : Window
         }
 
         StatusText.Text = "";
+        MainContainer.Content = new DetailView(selected, ShowListView);
     }
 
     private void OnAddClick(object? sender, RoutedEventArgs e)
     {
-        StatusText.Text = "Przejście do dodawania nowej pozycji.";
+        StatusText.Text = "";
+        MainContainer.Content = new AddView(ShowListView);
     }
 
     private void OnCountClick(object? sender, RoutedEventArgs e)

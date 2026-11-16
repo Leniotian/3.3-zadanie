@@ -3,15 +3,17 @@
         x:Class="Katalog.MainWindow"
         Title="Katalog"
         Width="600" Height="450">
-    <StackPanel Margin="20" Spacing="15">
-        <TextBlock Text="Katalog pozycji" FontSize="22" FontWeight="Bold"/>
-        <ListBox Name="ItemsListBox" Height="220"/>
-        <StackPanel Orientation="Horizontal" Spacing="10">
-            <Button Name="DetailsButton" Click="OnDetailsClick">Szczegóły</Button>
-            <Button Name="AddButton" Click="OnAddClick">Dodaj nową pozycję</Button>
-            <Button Click="OnCountClick">Policz</Button>
+    <ContentControl Name="MainContainer">
+        <StackPanel Name="ListPanel" Margin="20" Spacing="15">
+            <TextBlock Text="Katalog pozycji" FontSize="22" FontWeight="Bold"/>
+            <ListBox Name="ItemsListBox" Height="220"/>
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Button Name="DetailsButton" Click="OnDetailsClick">Szczegóły</Button>
+                <Button Name="AddButton" Click="OnAddClick">Dodaj nową pozycję</Button>
+                <Button Click="OnCountClick">Policz</Button>
+            </StackPanel>
+            <TextBlock Name="CountText"/>
+            <TextBlock Name="StatusText" Foreground="Gray"/>
         </StackPanel>
-        <TextBlock Name="CountText"/>
-        <TextBlock Name="StatusText" Foreground="Gray"/>
-    </StackPanel>
+    </ContentControl>
 </Window>
