@@ -9,7 +9,9 @@
         <StackPanel Orientation="Horizontal" Spacing="10">
             <Button Name="DetailsButton" Click="OnDetailsClick">Szczegóły</Button>
             <Button Name="AddButton" Click="OnAddClick">Dodaj nową pozycję</Button>
+            <Button Click="OnCountClick">Policz</Button>
         </StackPanel>
+        <TextBlock Name="CountText"/>
         <TextBlock Name="StatusText" Foreground="Gray"/>
     </StackPanel>
 </Window>

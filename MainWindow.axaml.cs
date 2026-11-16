@@ -69,4 +69,10 @@ public partial class MainWindow : Window
     {
         StatusText.Text = "Przejście do dodawania nowej pozycji.";
     }
+
+    private void OnCountClick(object? sender, RoutedEventArgs e)
+    {
+        var lines = File.ReadAllLines("dane/pozycje.txt");
+        CountText.Text = $"Pozycji w pliku: {lines.Length}";
+    }
 }
